@@ -21,15 +21,9 @@ Flow:
 # Commit changes (preferrably use the issue title)
 (ꖛ2) $ git commit -m "update index.html with wireframe data"
 
-# Merge your changes to the main branch
-(ꖛ2) $ git checkout main
-(main) $ git merge "#2"
-
-# Pull once again to make sure nobody pushed conflicting code
-(main) $ git pull
-
-# Once any conflics are resolved, or you get "Already up to date", push to the repo
-(main) $ git push
+# Push your changes and create a pull request
+# (if you just do git push, it will show you this command)
+(ꖛ2) $ git push --set-upstream origin #2
 ```
 
 ## Structure
