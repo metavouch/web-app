@@ -1,22 +1,18 @@
 import React from 'react';
 import './stylesheets/main.scss';
+import { Card } from 'react-bootstrap'
+
+// place components here
+
+// front page components: cards
+
+// javascript object for each component with details needed for ticket
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='main'>
+
     </div>
   );
 }
