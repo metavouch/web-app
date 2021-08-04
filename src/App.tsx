@@ -1,24 +1,14 @@
+import EventList from "./components/EventCard";
+import ConnectButton from "./components/ConnectButton";
 
-import React from 'react';
-import './stylesheets/main.scss';
-import { Card } from 'react-bootstrap'
-import { useMoralis } from "react-moralis";
+import "./stylesheets/main.scss";
 
 function App() {
-  const { authenticate, isAuthenticated, user } = useMoralis();
-
-  if (!isAuthenticated) {
-    return (
-      <div>
-        <button onClick={() => authenticate()}>Authenticate</button>
-      </div>
-    );
-  }
-
   return (
-    <div>
-      <h1>Welcome {user.get("username")}</h1>
-    </div>
+    <>
+      <ConnectButton />
+      <EventList />
+    </>
   );
 }
 

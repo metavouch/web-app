@@ -1,9 +1,4 @@
-
-import React from 'react';
-import App from './App';
 import ReactDOM from "react-dom";
-import Moralis from "./Moralis";
+import Dapp from "./Dapp";
 
-ReactDOM.render(<Moralis />, document.getElementById("root"));
-
-
+ReactDOM.render(<Dapp />, document.getElementById("root"));

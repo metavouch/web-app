@@ -1,7 +1,7 @@
 import App from './App';
 import { MoralisProvider } from "react-moralis";
 
-function Moralis() {
+function Dapp() {
   return (
     <MoralisProvider
       appId="Lha1izn3kc9AdoBp4FfI6ruxZdDZ9iIkIwmFxsgX"
@@ -12,4 +12,4 @@ function Moralis() {
   );
 }
 
-export default Moralis;
+export default Dapp;
