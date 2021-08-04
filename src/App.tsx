@@ -1,18 +1,23 @@
+
 import React from 'react';
 import './stylesheets/main.scss';
 import { Card } from 'react-bootstrap'
-
-// place components here
-
-// front page components: cards
-
-// javascript object for each component with details needed for ticket
-
+import { useMoralis } from "react-moralis";
 
 function App() {
-  return (
-    <div className='main'>
+  const { authenticate, isAuthenticated, user } = useMoralis();
 
+  if (!isAuthenticated) {
+    return (
+      <div>
+        <button onClick={() => authenticate()}>Authenticate</button>
+      </div>
+    );
+  }
+
+  return (
+    <div>
+      <h1>Welcome {user.get("username")}</h1>
     </div>
   );
 }
