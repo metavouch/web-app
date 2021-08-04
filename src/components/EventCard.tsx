@@ -36,7 +36,7 @@ const EventList = () => {
       title: "My Event",
       location: "Los Angeles",
       date: new Date(2022, 2, 22),
-      url: "https://google.com",
+      url: "/",
       background:
         "https://carbon-media.accelerator.net/0000000kYBW/cZmx7wMomqubLFH1LW9LCC;1543x2160.jpeg",
     },
@@ -44,7 +44,7 @@ const EventList = () => {
       title: "Malaa",
       location: "Sardine Can",
       date: new Date(2022, 2, 22),
-      url: "https://google.com",
+      url: "/",
       background:
         "https://i.scdn.co/image/ab6761610000e5ebbcc0f9459c1b1f64f1fffcae",
     },
@@ -52,7 +52,7 @@ const EventList = () => {
       title: "My Event",
       location: "Los Angeles",
       date: new Date(2022, 2, 22),
-      url: "https://google.com",
+      url: "/",
       background:
         "https://carbon-media.accelerator.net/0000000kYBW/cZmx7wMomqubLFH1LW9LCC;1543x2160.jpeg",
     },
@@ -60,7 +60,7 @@ const EventList = () => {
       title: "My Event",
       location: "Los Angeles",
       date: new Date(2022, 2, 22),
-      url: "https://google.com",
+      url: "/",
       background:
         "https://carbon-media.accelerator.net/0000000kYBW/cZmx7wMomqubLFH1LW9LCC;1543x2160.jpeg",
     },
@@ -68,7 +68,7 @@ const EventList = () => {
       title: "My Event",
       location: "Los Angeles",
       date: new Date(2022, 2, 22),
-      url: "https://google.com",
+      url: "/",
       background:
         "https://carbon-media.accelerator.net/0000000kYBW/cZmx7wMomqubLFH1LW9LCC;1543x2160.jpeg",
     },
