@@ -1,4 +1,5 @@
-import ConnectButton from "./ConnectButton";
+import ConnectButton from "./connect-button";
+import "../stylesheets/navbar.scss";
 
 const NavBar = () => {
   return (

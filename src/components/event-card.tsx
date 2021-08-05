@@ -1,4 +1,4 @@
-import IEvent from "../interfaces/Event";
+import IEvent from "../interfaces/event";
 import "../stylesheets/explore.scss";
 
 const months = [
