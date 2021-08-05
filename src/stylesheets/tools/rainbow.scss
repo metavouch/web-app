@@ -1,5 +1,5 @@
 @mixin rainbow-glow {
-  animation: cycle 0.8s ease infinite;
+  animation: cycle 1s linear infinite;
 
   @keyframes cycle {
     0% {
