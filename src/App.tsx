@@ -1,6 +1,5 @@
-import NavBar from "./components/NavBar";
-import EventList from "./components/EventCard";
-import ConnectButton from "./components/ConnectButton";
+import NavBar from "./components/navbar";
+import EventList from "./components/event-card";
 
 import "./stylesheets/main.scss";
 

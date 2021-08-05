@@ -1,4 +1,5 @@
-import ConnectButton from "./ConnectButton";
+import ConnectButton from "./connect-button";
+import "../stylesheets/navbar.scss";
 
 const NavBar = () => {
   return (
@@ -17,11 +18,7 @@ const NavBar = () => {
           <a href="/">Exchange</a>
         </li>
       </ul>
-      <ul id="connect">
-        <li>
-          <ConnectButton />
-        </li>
-      </ul>
+      <ConnectButton />
     </nav>
   );
 };
