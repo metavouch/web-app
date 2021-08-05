@@ -3,24 +3,19 @@
 
 body {
   min-height: 100vh;
-  background: radial-gradient(circle at 15% 22%, #403d55, transparent 50vh),
-    radial-gradient(circle at 89% 5%, #403d55, transparent 70vh),
-    radial-gradient(at 34% 78%, #403d55, transparent 100vh),
-    radial-gradient(at 4% 91%, #403d55, transparent 30vh),
-    radial-gradient(at 81% 89%, #403d55, transparent 80vh);
+  background: radial-gradient(circle at 15% 22%, #553d55, transparent 50vh),
+    radial-gradient(circle at 89% 5%, #3d5551, transparent 70vh),
+    radial-gradient(at 34% 78%, #45553d, transparent 100vh), radial-gradient(at 4% 91%, #553d3d, transparent 30vh),
+    radial-gradient(at 81% 89%, #554e3d, transparent 80vh);
   background-color: #191726;
   color: white;
-  padding: 2rem;
   box-sizing: border-box;
 }
 
 #root {
-  @include border-radius();
-  border: 1px solid rgb(220, 183, 242);
-  background-color: rgba(0,0,0,0.4);
-  height: 100%;
-  overflow: hidden;
-  padding: 2rem;
+  padding: 2rem 3rem;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
 
   @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
     -webkit-backdrop-filter: blur(1rem);

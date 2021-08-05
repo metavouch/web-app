@@ -1,54 +1,29 @@
+@use './tools/breakpoints.scss' as *;
+@use './tools/rainbow.scss' as *;
+
 nav {
   width: 100%;
   margin: 0 0 2rem 0;
-  display: grid;
+  display: flex;
   align-items: center;
-  grid-template-columns: 160px 1fr 160px;
-  justify-content: space-between;
+  justify-content: center;
 
   #logo {
     text-decoration: none;
     text-transform: uppercase;
-    padding-left: 20px;
 
     h1 {
-      font-size: 20px;
+      @include rainbow-glow;
+      font-size: 24px;
       font-family: Verdana, sans-serif;
       font-weight: bold;
-      animation: cycle 0.8s ease infinite;
-
-      @keyframes cycle {
-        0% {
-          text-shadow: 0 0 2px black, 1px 1px 1px red, 2px 2px 1px orange, 3px 3px 1px yellow;
-        }
-        16% {
-          text-shadow: 0 0 2px black, 1px 1px 1px orange, 2px 2px 1px yellow, 3px 3px 1px green;
-        }
-        33% {
-          text-shadow: 0 0 2px black, 1px 1px 1px yellow, 2px 2px 1px green, 3px 3px 1px cyan;
-        }
-        50% {
-          text-shadow: 0 0 2px black, 1px 1px 1px green, 2px 2px 1px cyan, 3px 3px 1px blue;
-        }
-        66% {
-          text-shadow: 0 0 2px black, 1px 1px 1px cyan, 2px 2px 1px blue, 3px 3px 1px magenta;
-        }
-        83% {
-          text-shadow: 0 0 2px black, 1px 1px 1px blue, 2px 2px 1px magenta, 3px 3px 1px red;
-        }
-        100% {
-          text-shadow: 0 0 2px black, 1px 1px 1px magenta, 2px 2px 1px red, 3px 3px 1px orange;
-        }
-      }
     }
   }
 
-  .navigation {
-    justify-self: center;
-  }
-
   ul {
+    display: none;
     padding: 0;
+    justify-self: right;
 
     li {
       font-family: monospace;
@@ -66,10 +41,15 @@ nav {
           transition: 0.5s;
         }
       }
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 
   button {
+    display: none;
     text-decoration: none;
     background-color: #342f52;
     color: white;
@@ -83,6 +63,19 @@ nav {
     &:hover {
       text-decoration: underline;
       cursor: pointer;
+    }
+  }
+
+  @include md {
+    justify-content: space-between;
+    .navigation {
+      display: block;
+    }
+  }
+
+  @include lg {
+    button {
+      display: block;
     }
   }
 }

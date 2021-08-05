@@ -18,11 +18,7 @@ const NavBar = () => {
           <a href="/">Exchange</a>
         </li>
       </ul>
-      <ul id="connect">
-        <li>
-          <ConnectButton />
-        </li>
-      </ul>
+      <ConnectButton />
     </nav>
   );
 };
