@@ -1,16 +1,18 @@
-@use './tools/colors.scss' as *;
 @use './tools/mixins.scss' as *;
 
 body {
   min-height: 100vh;
   background: radial-gradient(circle at 15% 22%, #553d55, transparent 50vh),
     radial-gradient(circle at 89% 5%, #3d5551, transparent 70vh),
-    radial-gradient(at 34% 78%, #45553d, transparent 100vh), radial-gradient(at 4% 91%, #553d3d, transparent 30vh),
+    radial-gradient(at 34% 78%, #45553d, transparent 100vh),
+    radial-gradient(at 4% 91%, #553d3d, transparent 30vh),
     radial-gradient(at 81% 89%, #554e3d, transparent 80vh);
   background-color: #191726;
   color: white;
   box-sizing: border-box;
   display: flex;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 #root {

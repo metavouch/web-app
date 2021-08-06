@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <nav>
+    <nav id="navbar">
       <a id="logo" href="/">
         <h1>Metavouch</h1>
       </a>
