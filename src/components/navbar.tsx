@@ -1,5 +1,6 @@
 import ConnectButton from "./connect-button";
 import "../stylesheets/navbar.scss";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
@@ -9,13 +10,13 @@ const NavBar = () => {
       </a>
       <ul className="navigation">
         <li>
-          <a href="/">Explore</a>
+          <Link to="/">Explore</Link>
         </li>
         <li>
-          <a href="/">Create Event</a>
+          <Link to="/create">Create Event</Link>
         </li>
         <li>
-          <a href="/">Exchange</a>
+          <Link to="/exchange">Exchange</Link>
         </li>
       </ul>
       <ConnectButton />
