@@ -3,6 +3,6 @@ export default interface IEvent {
   location: string;
   date: Date;
   background: string;
-  url: string;
+  id: number;
 }
 

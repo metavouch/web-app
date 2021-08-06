@@ -1,5 +1,6 @@
 import IEvent from "../interfaces/event";
 import "../stylesheets/explore.scss";
+import { Link } from 'react-router-dom';
 
 const months = [
   "January",
@@ -18,7 +19,7 @@ const months = [
 
 const EventCard = (props: IEvent) => {
   return (
-    <a href={props.url} className="card" style={{
+    <Link to={`/event/${props.id}`} className="card" style={{
       backgroundImage: `url(${props.background})`
     }}>
       <h2>{props.title}</h2>
@@ -26,7 +27,7 @@ const EventCard = (props: IEvent) => {
         {months[props.date.getMonth()]} {props.date.getDate()},{" "}
         {props.date.getFullYear()} | {props.location}
       </p>
-    </a>
+    </Link>
   );
 };
 
@@ -36,7 +37,7 @@ const EventList = () => {
       title: "My Event",
       location: "Los Angeles",
       date: new Date(2022, 2, 22),
-      url: "/",
+      id: 1,
       background:
         "https://carbon-media.accelerator.net/0000000kYBW/cZmx7wMomqubLFH1LW9LCC;1543x2160.jpeg",
     },
@@ -44,7 +45,7 @@ const EventList = () => {
       title: "Malaa",
       location: "Sardine Can",
       date: new Date(2022, 2, 22),
-      url: "/",
+      id: 2,
       background:
         "https://i.scdn.co/image/ab6761610000e5ebbcc0f9459c1b1f64f1fffcae",
     },
@@ -52,7 +53,7 @@ const EventList = () => {
       title: "My Event",
       location: "Los Angeles",
       date: new Date(2022, 2, 22),
-      url: "/",
+      id: 3,
       background:
         "https://carbon-media.accelerator.net/0000000kYBW/cZmx7wMomqubLFH1LW9LCC;1543x2160.jpeg",
     },
@@ -60,7 +61,7 @@ const EventList = () => {
       title: "My Event",
       location: "Los Angeles",
       date: new Date(2022, 2, 22),
-      url: "/",
+      id: 4,
       background:
         "https://carbon-media.accelerator.net/0000000kYBW/cZmx7wMomqubLFH1LW9LCC;1543x2160.jpeg",
     },
@@ -68,7 +69,7 @@ const EventList = () => {
       title: "My Event",
       location: "Los Angeles",
       date: new Date(2022, 2, 22),
-      url: "/",
+      id: 5,
       background:
         "https://carbon-media.accelerator.net/0000000kYBW/cZmx7wMomqubLFH1LW9LCC;1543x2160.jpeg",
     },
