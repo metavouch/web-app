@@ -1,4 +1,5 @@
 @use './tools/breakpoints.scss' as *;
+@use './tools/mixins.scss' as *;
 
 .overlay {
   display: flex;
@@ -28,10 +29,17 @@
       height: 12rem;
       margin: 1rem;
       padding: 3rem;
+      cursor: pointer;
+      @include border-radius;
 
       img {
         height: 100%;
         width: 100%;
+        transition: 0.2s;
+
+        &:hover {
+          transform: scale(1.1);
+        }
       }
     }
 

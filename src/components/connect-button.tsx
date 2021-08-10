@@ -15,17 +15,17 @@ const ConnectButton: React.FC = () => {
 
   const openModal = () => {
     setIsOpen(true);
-  }
+  };
 
   const closeModal = () => {
     setIsOpen(false);
-  }
+  };
 
   return (
     <>
-    <button onClick={openModal}>
-      <FontAwesomeIcon icon={faWallet} />
-    </button>
+      <button onClick={openModal}>
+        <FontAwesomeIcon icon={faWallet} />
+      </button>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
@@ -33,10 +33,14 @@ const ConnectButton: React.FC = () => {
         className="modal"
         overlayClassName="overlay"
       >
-        <button onClick={() => authenticate()}>
+        <button onClick={() => authenticate().then(() => closeModal())}>
           <img src={metamaskLogo} alt="Connect with MetaMask" />
         </button>
-        <button onClick={() => authenticate({ provider: "walletconnect" })}>
+        <button
+          onClick={() =>
+            authenticate({ provider: "walletconnect" }).then(() => closeModal())
+          }
+        >
           <img src={walletconnectLogo} alt="Connect with WalletConnect" />
         </button>
       </Modal>
