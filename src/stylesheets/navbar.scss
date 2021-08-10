@@ -6,7 +6,7 @@
   margin: 0 0 2rem 0;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 
   #logo {
     text-decoration: none;
@@ -49,7 +49,7 @@
   }
 
   button {
-    display: none;
+    display: block;
     text-decoration: none;
     background-color: #342f52;
     color: white;
@@ -67,14 +67,7 @@
   }
 
   @include md {
-    justify-content: space-between;
     .navigation {
-      display: block;
-    }
-  }
-
-  @include lg {
-    button {
       display: block;
     }
   }
