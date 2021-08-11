@@ -7,6 +7,7 @@
   align-items: center;
   flex-direction: column;
   height: 100%;
+  padding: 1rem;
 
   position: fixed;
   top: 0;
@@ -20,31 +21,76 @@
   .modal {
     display: flex;
     flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 
-    button {
+    button,
+    a {
       background-color: #342f52;
       color: white;
       border: none;
-      width: 12rem;
-      height: 12rem;
       margin: 1rem;
-      padding: 3rem;
       cursor: pointer;
-      @include border-radius;
+      width: 100%;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.2s;
 
-      img {
-        height: 100%;
-        width: 100%;
-        transition: 0.2s;
-
-        &:hover {
-          transform: scale(1.1);
-        }
+      &:hover {
+        transform: scale(1.05);
       }
     }
 
-    @include md {
-      flex-direction: row;
+    .wallet-options-connected {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      p {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 20rem;
+      }
+
+      button,
+      a {
+        max-width: 20rem;
+        height: 4rem;
+        border-radius: 0.8rem;
+        margin: 0.5rem 1rem;
+      }
+    }
+
+    .wallet-options-disconnected {
+      display: flex;
+      flex-direction: column;
+
+      button {
+        width: 12rem;
+        height: 12rem;
+        padding: 3rem;
+        @include border-radius;
+
+        img {
+          height: 100%;
+          width: 100%;
+          transition: 0.2s;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+
+      @include md {
+        flex-direction: row;
+        justify-content: center;
+      }
     }
   }
 }

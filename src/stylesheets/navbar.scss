@@ -23,6 +23,7 @@
 
   ul {
     display: none;
+    margin: auto;
     padding: 0;
     justify-self: right;
 
@@ -34,9 +35,9 @@
       margin: 10px;
 
       a {
-        padding: 1rem;
+        padding: 0.8rem;
         transition: 0.2s;
-        @include border-radius;
+        border-radius: 0.4rem;
 
         &:hover {
           text-decoration: none;
@@ -56,14 +57,13 @@
     background-color: #342f52;
     color: white;
     border: none;
-    padding: .8rem;
+    padding: 0.8rem;
     transition: 0.2s;
     font-family: monospace;
     text-transform: uppercase;
     list-style: none;
     font-size: 1.2rem;
-
-    @include border-radius;
+    border-radius: 0.6rem;
 
     &:hover {
       text-decoration: underline;
@@ -75,6 +75,52 @@
   @include md {
     .navigation {
       display: block;
+    }
+  }
+
+  #wallet-status {
+    display: flex;
+    width: 4px;
+    height: 4px;
+    margin: 1rem;
+    margin-left: auto;
+
+    & > * {
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+    }
+
+    .wallet-connected {
+      background-color: green;
+      animation: glow-green 5s infinite ease-in-out;
+
+      @keyframes glow-green {
+        0% {
+          background-color: green;
+        }
+        50% {
+          background-color: #00800050;
+        }
+      }
+    }
+
+    .wallet-disconnected {
+      background-color: red;
+      animation: glow-red 5s infinite ease-in-out;
+
+      @keyframes glow-red {
+        0% {
+          background-color: red;
+        }
+        50% {
+          background-color: #ff000050;
+        }
+      }
+    }
+
+    @include md {
+      margin: 1rem;
     }
   }
 }
