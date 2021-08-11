@@ -1,4 +1,4 @@
-import ConnectButton from "./connect-button";
+import Wallet from "./connect-button";
 import "../stylesheets/navbar.scss";
 import { Link } from "react-router-dom";
 
@@ -19,7 +19,7 @@ const NavBar = () => {
           <Link to="/exchange">Exchange</Link>
         </li>
       </ul>
-      <ConnectButton />
+      <Wallet />
     </nav>
   );
 };
