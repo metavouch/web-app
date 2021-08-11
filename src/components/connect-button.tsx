@@ -29,11 +29,23 @@ const Wallet: React.FC = () => {
       options = (
         <div className="wallet-options-connected">
           <p>{user.attributes.accounts[0]}</p>
-          <Link to="/" onClick={() => closeModal()}>Explore</Link>
-          <Link to="/exchange" onClick={() => closeModal()}>My Tickets</Link>
-          <Link to="/create" onClick={() => closeModal()}>Hosted Events</Link>
-          <button onClick={() => logout().then(() => closeModal())}>
-            Disconnect Wallet
+          <Link to="/" onClick={() => closeModal()}>
+            Explore
+          </Link>
+          <Link to="/exchange" onClick={() => closeModal()}>
+            My Tickets
+          </Link>
+          <Link to="/create" onClick={() => closeModal()}>
+            Hosted Events
+          </Link>
+          <button
+            className="disconnect-button"
+            onClick={() => {
+              logout();
+              closeModal();
+            }}
+          >
+            Disconnect
           </button>
         </div>
       );
