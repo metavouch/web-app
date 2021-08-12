@@ -22,8 +22,14 @@ const Wallet: React.FC = () => {
     setIsOpen(false);
   };
 
+  const connectionError = () => {
+    document.querySelector("#connection-error")!.innerHTML =
+      "Could not connect";
+  };
+
   const getWalletOptions = () => {
     let options = <></>;
+    const handlers = { onError: connectionError, onSuccess: closeModal };
 
     if (isAuthenticated) {
       options = (
@@ -52,14 +58,13 @@ const Wallet: React.FC = () => {
     } else {
       options = (
         <div className="wallet-options-disconnected">
-          <button onClick={() => authenticate().then(() => closeModal())}>
+          <p id="connection-error"></p>
+          <button onClick={() => authenticate(handlers)}>
             <img src={metamaskLogo} alt="Connect with MetaMask" />
           </button>
           <button
             onClick={() =>
-              authenticate({ provider: "walletconnect" }).then(() =>
-                closeModal()
-              )
+              authenticate({ ...handlers, provider: "walletconnect" })
             }
           >
             <img src={walletconnectLogo} alt="Connect with WalletConnect" />

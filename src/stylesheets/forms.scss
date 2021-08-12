@@ -1,3 +1,5 @@
+@use './tools/breakpoints.scss' as *;
+
 form {
   margin: auto;
   display: flex;
@@ -10,6 +12,7 @@ form {
   color: white;
   box-sizing: border-box;
   font-size: 1rem;
+  height: 100%;
 
   > * {
     width: 100%;
@@ -27,12 +30,16 @@ form {
     box-sizing: border-box;
     margin: 0;
     margin-bottom: 12px;
-    background-color: rgb(33 30 34 / 41%);
+    background-color: rgb(33 30 34);
     border: 1px solid rgb(220, 183, 242);
     border-radius: 6px;
     color: white;
     padding: 12px;
     font-family: monospace;
+
+    @include md {
+      background-color: rgb(33 30 34 / 41%);
+    }
   }
 
   button {
@@ -71,6 +78,10 @@ form {
 
   #title {
     font-size: 1.5rem;
+  }
+
+  @include md {
+    justify-content: center;
   }
 }
 
