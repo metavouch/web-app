@@ -22,43 +22,6 @@ form {
     outline: none;
   }
 
-  input,
-  textarea,
-  button,
-  select {
-    display: block;
-    box-sizing: border-box;
-    margin: 0;
-    margin-bottom: 12px;
-    background-color: rgb(33 30 34);
-    border: 1px solid rgb(220, 183, 242);
-    border-radius: 6px;
-    color: white;
-    padding: 12px;
-    font-family: monospace;
-
-    @include md {
-      background-color: rgb(33 30 34 / 41%);
-    }
-  }
-
-  button {
-    margin: 20px;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 10px;
-    font-family: monospace;
-    background: rgb(220, 183, 242);
-    color: #211e22;
-
-    &:hover {
-      cursor: pointer;
-      background: #211e22;
-      color: rgb(220, 183, 242);
-      transition: 0.3s;
-    }
-  }
-
   label {
     margin-left: 5px;
     text-transform: uppercase;
@@ -82,6 +45,48 @@ form {
 
   @include md {
     justify-content: center;
+  }
+}
+
+input,
+textarea,
+button,
+select {
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+  margin-bottom: 12px;
+  background-color: rgb(33 30 34);
+  border: 1px solid rgb(220, 183, 242);
+  border-radius: 6px;
+  color: white;
+  padding: 12px;
+  font-family: monospace;
+
+  @include md {
+    background-color: rgb(33 30 34 / 41%);
+  }
+}
+
+input,
+textarea {
+  box-shadow: inset 0 0 10px #000000;
+}
+
+button {
+  margin: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px;
+  font-family: monospace;
+  background: rgb(220, 183, 242);
+  color: #211e22;
+
+  &:hover {
+    cursor: pointer;
+    background: #211e22;
+    color: rgb(220, 183, 242);
+    transition: 0.3s;
   }
 }
 

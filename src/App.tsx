@@ -1,7 +1,8 @@
 import NavBar from "./components/navbar";
 import Explore from "./components/explore";
 import EventDetail from "./components/event-detail";
-import ScrollToTop from './components/helpers/scroll-to-top';
+import WalletView from "./components/ticket-wallet";
+import ScrollToTop from "./components/helpers/scroll-to-top";
 import { MoralisProvider } from "react-moralis";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import CreateEventForm from "./components/create-event-form";
@@ -24,7 +25,9 @@ function App() {
           <Route path="/create">
             <CreateEventForm />
           </Route>
-          <Route path="/exchange"></Route>
+          <Route path="/exchange">
+            <WalletView />
+          </Route>
           <Route exact path="/">
             <Explore />
           </Route>

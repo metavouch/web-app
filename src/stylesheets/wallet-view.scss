@@ -1,0 +1,32 @@
+@use './tools/mixins.scss' as *;
+
+#wallet-view {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  overflow: scroll;
+  min-height: 80%;
+
+  & > * {
+    max-width: 100%;
+  }
+
+  .card {
+    @include card;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    min-height: 0;
+    width: 12rem;
+    height: 24rem;
+    margin: 1rem;
+    padding: 2rem;
+
+    h1 {
+      padding: 0;
+      margin: 0;
+      font-size: 1rem;
+    }
+  }
+}
