@@ -12,7 +12,6 @@
   background-color: blue;
   background-size: cover;
   object-fit: cover;
-  aspect-ratio: 3 / 4;
   background-position: center;
   border-radius: 14px;
   text-decoration: none;
@@ -20,6 +19,7 @@
   box-shadow: 0 0 10px #191726;
   user-select: none;
   min-height: 32rem;
+  max-width: 100%;
 
   &:hover {
     cursor: pointer;

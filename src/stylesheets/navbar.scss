@@ -3,11 +3,11 @@
 @use './tools/mixins.scss' as *;
 
 #navbar {
-  width: 100%;
+  max-width: 100%;
   margin: 0 0 2rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-sizing: border-box;
 
   #logo {
     text-decoration: none;
@@ -79,49 +79,55 @@
     }
   }
 
-  #wallet-status {
+  .wallet {
     display: flex;
-    width: 4px;
-    height: 4px;
-    margin: 1rem;
-    margin-left: auto;
+    align-items: center;
 
-    & > * {
-      height: 100%;
-      width: 100%;
-      border-radius: 50%;
-    }
-
-    .wallet-connected {
-      background-color: green;
-      animation: glow-green 5s infinite ease-in-out;
-
-      @keyframes glow-green {
-        0% {
-          background-color: green;
-        }
-        50% {
-          background-color: #00800050;
-        }
-      }
-    }
-
-    .wallet-disconnected {
-      background-color: red;
-      animation: glow-red 5s infinite ease-in-out;
-
-      @keyframes glow-red {
-        0% {
-          background-color: red;
-        }
-        50% {
-          background-color: #ff000050;
-        }
-      }
-    }
-
-    @include md {
+    #wallet-status {
+      display: flex;
+      width: 4px;
+      height: 4px;
       margin: 1rem;
+      margin-left: auto;
+
+      & > * {
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+      }
+
+      .wallet-connected {
+        background-color: green;
+        animation: glow-green 5s infinite ease-in-out;
+
+        @keyframes glow-green {
+          0% {
+            background-color: green;
+          }
+          50% {
+            background-color: #00800050;
+          }
+        }
+      }
+
+      .wallet-disconnected {
+        background-color: red;
+        animation: glow-red 5s infinite ease-in-out;
+
+        @keyframes glow-red {
+          0% {
+            background-color: red;
+          }
+          50% {
+            background-color: #ff000050;
+          }
+        }
+      }
     }
+  }
+
+  @include md {
+    margin: 0 1rem 1rem 1rem;
+    grid-template-columns: 1fr 3fr 1fr;
   }
 }

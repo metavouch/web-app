@@ -85,7 +85,7 @@ const Wallet: React.FC = () => {
   };
 
   return (
-    <>
+    <div className="wallet">
       <div id="wallet-status">{checkWalletStatus()}</div>
       <button onClick={openModal}>
         <FontAwesomeIcon icon={faWallet} />
@@ -99,7 +99,7 @@ const Wallet: React.FC = () => {
       >
         {getWalletOptions()}
       </Modal>
-    </>
+    </div>
   );
 };
 
